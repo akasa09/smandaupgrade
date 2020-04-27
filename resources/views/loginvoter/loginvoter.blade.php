@@ -15,11 +15,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<h1>Login E-Voting SMA 2 Pati</h1>
+				<center><h1>Login E-Voting SMA 2 Pati</h1><center>
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="/loginvoter">
+			<form id="signup-form" method="post" action="/login">
                 {{ csrf_field() }}
 				<input type="text" name="nisn" id="nisn" placeholder="NISN" />
 				

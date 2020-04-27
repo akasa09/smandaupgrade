@@ -25,14 +25,14 @@
                                                 <p style="color:red; margin-top:1em">{{$errors->first('nisn')}}</p>
                                             @endif
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
+                                                <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" placeholder="Nama Pemilih" name="namapemilih" value="{{$milih->name}}">
                                             </div>
                                                 @if ($errors->has('namapemilih'))
                                                     <p style="color:red; margin-top:1em">{{$errors->first('namapemilih')}}</p>
                                                 @endif
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                                                <span class="input-group-addon"><i class="fa fa-tasks" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" placeholder="Kelas" name="kelas" value="{{$milih->class}}">
                                             </div>
                                             @if ($errors->has('kelas'))

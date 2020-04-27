@@ -151,7 +151,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #84f2e0	!important;
 		}
 
 	strong, b {
@@ -2460,8 +2460,8 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 4px;
 		border: 0;
-		box-shadow: inset 0 0 0 2px #585858;
-		color: #585858 !important;
+		box-shadow: inset 0 0 0 2px #ebebeb;
+		color: #ebebeb !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
@@ -2499,8 +2499,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			color: #f2849e !important;
-			box-shadow: inset 0 0 0 2px #f2849e;
+			color: #84f2e0 !important;
+			box-shadow: inset 0 0 0 2px #84f2e0;
 		}
 
 		input[type="submit"]:active,
@@ -2550,7 +2550,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #ee5f81;
+				background-color: #84f2e0;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2577,7 +2577,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2587,7 +2587,7 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
-			width: calc(33.33333% - 2.5em);
+			width: calc(50% - 2.5em);
 			margin: 2.5em 0 0 2.5em;
 		}
 
@@ -2870,7 +2870,7 @@ input, select, textarea {
 		}
 
 		nav a:hover {
-			color: #f2849e;
+			color: #84f2e0;
 		}
 
 		nav a::before {
@@ -2878,7 +2878,8 @@ input, select, textarea {
 			display: block;
 			height: 5px;
 			width: 100%;
-			background-color: #f2849e;
+			background-color: #84f2e0;
+			text-decoration-color: #84f2e0;
 
 			position: absolute;
 			top: 0;

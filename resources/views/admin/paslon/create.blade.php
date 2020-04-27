@@ -24,14 +24,14 @@
                                                 <p style="color:red; margin-top:1em">{{$errors->first('ketos')}}</p>
                                             @endif
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
+                                                <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" placeholder="Nama Wakil Ketua OSIS" name="waketos">
                                             </div>
                                             @if ($errors->has('waketos'))
                                                 <p style="color:red; margin-top:1em">{{$errors->first('waketos')}}</p>
                                             @endif
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                                                <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
                                                 <input type="file" class="form-control" placeholder="Foto" name="foto">
                                             </div>
                                             @if ($errors->has('foto'))

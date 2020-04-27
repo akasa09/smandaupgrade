@@ -17,7 +17,7 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="review-content-section">
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
+                                                <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
                                                 <textarea name="visi" class="mytextarea" cols="auto" rows="5" placeholder="Visi" style="width:100%"></textarea>
                                             </div>
                                             @if ($errors->has('visi'))

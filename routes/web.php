@@ -13,16 +13,16 @@ Route::get('/koding', function () {
 // });
 
 //register
-Route::get('/register', 'RegisterController@index');
-Route::post('/register', 'RegisterController@store');
+Route::get('/register', 'AdminVoterController@frontregist');
+Route::post('/register', 'AdminVoterController@backregist');
 //login admin
-Route::get('/login', 'LoginController@index')->middleware('guest');
-Route::post('/login', 'LoginController@post');
+Route::get('/loginadmin', 'LoginController@index')->middleware('guest');
+Route::post('/loginadmin', 'LoginController@post');
 Route::post('/logout-admin', 'LoginController@logout');
 
 //login voter
-Route::get('/loginvoter', 'LoginVoterController@index')->middleware('guest');
-Route::post('/loginvoter', 'LoginVoterController@post');
+Route::get('/login', 'LoginVoterController@index')->middleware('guest');
+Route::post('/login', 'LoginVoterController@post');
 Route::post('/logout', 'LoginVoterController@logout');
 
 Route::get('/suara/aftervote', 'AfterVoteController@index');

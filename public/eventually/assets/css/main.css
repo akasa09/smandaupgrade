@@ -804,7 +804,13 @@ button,
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  position: relative; }
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+   }
+  #signup-form input {
+    margin-bottom: 15px;
+  }
   #signup-form input[type="text"],
   #signup-form input[type="password"],
   #signup-form input[type="email"] {

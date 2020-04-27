@@ -17,14 +17,14 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="review-content-section">
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="fa fa-card"></i> </span>
+                                                <span class="input-group-addon"><i class="icon nalika-user"></i> </span>
                                                 <input type="text" class="form-control" placeholder="NISN" name="nisn">
                                             </div>
                                             @if ($errors->has('nisn'))
                                                 <p style="color:red; margin-top:1em">{{$errors->first('nisn')}}</p>
                                             @endif
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                                                <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" placeholder="Nama Pemilih" name="nama">
                                             </div>
                                                 @if ($errors->has('namapemilih'))

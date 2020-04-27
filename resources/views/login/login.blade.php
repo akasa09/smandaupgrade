@@ -15,11 +15,11 @@
 
   <!-- Header -->
    <header id="header">
-    <h1>Login Admin</h1>
+    <center><h1>Login Admin</h1></center>
    </header>
 
   <!-- Signup Form -->
-   <form id="signup-form" method="post" action="/login">
+   <form id="signup-form" method="post" action="/loginadmin">
                 {{ csrf_field() }}
     <input type="text" name="username" id="username" placeholder="Username" />
     
@@ -36,12 +36,6 @@
 
   <!-- Footer -->
    <footer id="footer">
-    <ul class="icons">
-     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-     <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-     <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-     <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-    </ul>
     <ul class="copyright">
      <li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
     </ul>

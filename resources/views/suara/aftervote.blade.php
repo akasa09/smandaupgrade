@@ -53,8 +53,7 @@
 					<div id="main">
 						<div class="text-center">
 							
-								<h1>YOU HAVE ALREADY VOTED FOR THIS ELECTION. </h1>
-								<p>Sistem e-voting ini bertujuan untuk memudahkan dalam pemilihan ketua OSIS di SMA N 2 Pati</p>
+								<h1>KAMU SUDAH MELAKUKAN VOTING PADA PEMILIHAN INI </h1>
 								<button data-toggle="modal" data-target="#myModal">Hasil Pilihanmu</button>
 								
 							

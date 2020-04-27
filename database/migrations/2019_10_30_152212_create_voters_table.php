@@ -15,13 +15,13 @@ class CreateVotersTable extends Migration
     {
         Schema::create('voters', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->integer('nisn')->unique();
-            $table->string('name');
-            $table->string('class');
+            $table->string('name')->nullable();
+            $table->string('class')->nullable();
             $table->string('password');
-            $table->string('realpass');
+            $table->boolean('registerinfo')->default(false);
             $table->boolean('status')->default(false);
+            $table->timestamps();
             
         });
     }

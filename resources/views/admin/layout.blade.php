@@ -87,8 +87,12 @@
             </div>
 			<div class="nalika-profile">
 				<div class="profile-dtl">
-					<a href="#"><img src="/nalika/img/notification/4.jpg" alt="" /></a>
-					<h2>Admin <span class="min-dtn">1</span></h2>
+          <a href="#"><img src="/nalika/img/notification/4.jpg" alt="" /></a>
+          @if (Auth::guard('admin')->user()->role=='superadmin')
+          <h2>Super Admin</h2>
+          @else 
+          <h2>Admin</h2>
+          @endif
 				</div>
 				
 			</div>
@@ -130,17 +134,17 @@
                                     <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
                                         <div class="menu-switcher-pro">
                                             <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
-													<i class="icon nalika-menu-task"></i>
-												</button>
+                                              <i class="icon nalika-menu-task"></i>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <div class="breadcome-heading">
-												<form role="search" class="">
+												{{-- <form role="search" class="">
 													<input type="text" placeholder="Search..." class="form-control">
 													<a href=""><i class="fa fa-search"></i></a>
-												</form>
+												</form> --}}
 											</div>
                                         </div>
                                     </div>
@@ -150,10 +154,14 @@
 
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<i class="icon nalika-user nalika-user-rounded header-riht-inf" aria-hidden="true"></i>
-															<span class="admin-name">Admin</span>
-															<i class="icon nalika-down-arrow nalika-angle-dw nalika-icon"></i>
-														</a>
+                                                      <i class="icon nalika-user nalika-user-rounded header-riht-inf" aria-hidden="true"></i>
+                                                      @if (Auth::guard('admin')->user()->role=='superadmin')
+                                                        <span class="admin-name">Super Admin</span>
+                                                      @else
+                                                        <span class="admin-name">Admin</span>
+                                                      @endif  
+                                                      <i class="icon nalika-down-arrow nalika-angle-dw nalika-icon"></i>
+                                                    </a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                     
                                                         <li>

@@ -27,7 +27,6 @@ class VotersImport implements ToCollection
                     'name' => $row[1],
                     'class' => $row[3],
                     'password' => Hash::make($password),
-                    'realpass' => $password
                  ]);
             }   
         }

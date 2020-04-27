@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Voter;
+use App\Rules\RegisterVoter;
 use Illuminate\Http\Request;
 use App\Imports\VotersImport;
 use Illuminate\Support\Facades\Hash;
@@ -40,11 +42,11 @@ class AdminVoterController extends Controller
      */
     public function store(Request $request)
     {
-        $errors = $this->validate($request, [
-            'nisn' => 'required | unique:voters,nisn',
-            'namapemilih' => 'required',
-            'kelas' => 'required',
-        ]);
+        // $errors = $this->validate($request, [
+        //     'nisn' => 'required | unique:voters,nisn',
+        //     'namapemilih' => 'required',
+        //     'kelas' => 'required',
+        // ]);
 
         $password = $this->randomString();
         $pemilih = Voter::create([
@@ -52,7 +54,6 @@ class AdminVoterController extends Controller
             'name' => request('namapemilih'),
             'class' => request('kelas'),
             'password' => Hash::make($password),
-            'realpass' => $password,
             'status' => 0
         ]
         );
@@ -79,6 +80,7 @@ class AdminVoterController extends Controller
      */
     public function edit($id)
     {
+        
         $milih = Voter::find($id);
         return view('admin/voters/edit', compact('milih'));
     }
@@ -126,6 +128,31 @@ class AdminVoterController extends Controller
         Excel::import(new VotersImport, request()->file('excel'));
         
         return redirect('admin/voters');
+    }
+    
+    public function frontregist()
+    {
+        return view('register/register');
+    }
+
+    public function backregist(Request $request)
+    {
+        $this->validate($request, [
+            'nisn' => ['bail', 'required', 'exists:voters,nisn', new RegisterVoter],
+        ]);
+
+        Voter::where('nisn', $request->nisn)->update([
+            'nisn' => request('nisn'),
+            'name' => request('nama'),
+            'class' => request('kelas'),
+            'password' => Hash::make(request('password')),
+            'registerinfo' => 1
+        ]);
+
+        if (Auth::guard('voter')->attempt(['nisn' => $request->nisn, 'password' => $request->password])) {
+            // if successful, then redirect to their intended location
+            return redirect()->intended('/suara/home');
+        }
     }
 
     function randomString($length = 6) {

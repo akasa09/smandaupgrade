@@ -23,13 +23,13 @@ class LoginVoterController extends Controller
             return redirect()->intended('/suara/home');
         }
 
-        return redirect()->intended('/loginvoter');
+        return redirect()->intended('/login');
     }
     public function logout()
     {
     if (Auth::guard('voter')->check()) {
         Auth::guard('voter')->logout();
     } 
-    return redirect('/loginvoter');
+    return redirect('/login');
     }
 }

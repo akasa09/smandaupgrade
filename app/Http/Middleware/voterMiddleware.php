@@ -35,6 +35,6 @@ class voterMiddleware
             //     return redirect('/suara/aftervote');
             // }
         }
-        return redirect('/loginvoter');
+        return redirect('/login');
     }
 }

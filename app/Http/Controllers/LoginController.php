@@ -24,7 +24,7 @@ class LoginController extends Controller
             return redirect()->intended('/admin/paslons');
         }
 
-        return redirect()->intended('/login');
+        return redirect()->intended('/loginadmin');
     }
 
     public function logout()
@@ -32,6 +32,6 @@ class LoginController extends Controller
     if (Auth::guard('admin')->check()) {
         Auth::guard('admin')->logout();
     } 
-    return redirect('/login');
+    return redirect('/loginadmin');
     }
 }
